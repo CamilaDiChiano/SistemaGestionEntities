@@ -1,10 +1,25 @@
+
+
+
+
 namespace SistemaGestionEntities
+    
 {
-    public partial class Form1 : Form
+    public partial class frmUsuario : Form
     {
-        public Form1()
+        public frmUsuario()
         {
             InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void frmUsuario_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
