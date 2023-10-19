@@ -4,22 +4,22 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SistemaGestionEntities;
+using SistemaGestionBussiness;
 
 #nullable disable
 
 namespace SistemaGestionEntities.Migrations
 {
-    [DbContext(typeof(Contexto))]
-    [Migration("20231009021448_DatosNuevos")]
-    partial class DatosNuevos
+    [DbContext(typeof(SistemaGestionContext))]
+    [Migration("20231018162241_InitialCreate5")]
+    partial class InitialCreate5
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("ProductVersion", "7.0.12")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -105,7 +105,7 @@ namespace SistemaGestionEntities.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("SistemaGestionEntities.Venta", b =>
